@@ -1,0 +1,104 @@
+/* ========================
+      Theming Mode
+========================== */
+
+:root {
+  --primary-color: #379683;
+  --secondary-color: #28dedb;
+  --font-color: #de2828;
+  --bg-color: #05386B;
+  --heading-color: #9228de;
+}
+
+[data-theme="dark"] {
+  --primary-color: #FF7597;
+  --secondary-color: #fc03a1;
+  --font-color: #FFFFFF;
+  --bg-color: #333333;
+  --heading-color: #cca5e8;
+}
+
+/* =======================
+  Toggle Switch Slider
+==========================*/
+.theme-switch-wrapper {
+  float: left;
+  margin: 12px;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* =====================
+      Main Styling
+======================= */
+
+html {
+  background-color: var(--bg-color);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.secondary-text {
+  color: var(--secondary-color);
+}
+
+p {
+  color: var(--font-color);
+}
+
+h1, h2 {
+  color: var(--heading-color);
+}
